@@ -1,0 +1,138 @@
+.footer {
+	padding-top: 60px;
+	background: #262626;
+}
+
+.footer__row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding-bottom: 65px;
+}
+
+.footer__about {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 271px;
+	flex: 0 1 271px;
+}
+
+.footer__logo {
+	font-size: 26px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	margin-bottom: 30px;
+}
+
+.footer__logo a {
+	color: #fff;
+}
+
+.footer__text {
+	color: #6b6b6b;
+}
+
+.footer__menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.footer__list {
+	list-style: none;
+}
+
+.footer__list:first-child {
+	margin-right: 127px;
+}
+
+.footer__menu-item {
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.footer__menu-item > a {
+	color: #fff;
+	padding: 5px 10px;
+}
+
+.footer__menu-item > a:hover {
+	background: #a78943;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.footer__social-title {
+	color: #6b6b6b;
+	margin-bottom: 15px;
+}
+
+.footer__social-block{
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer__social-icons{
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__social-icons-icon{
+	color: white;
+}
+
+.footer__social-block:hover .footer__social-icons-icon{
+	color: #a78943;
+	transition: all 0.2s;
+}
+
+.footer__social-block:hover {
+	color: #a78943;
+    border-top: 1px solid #a78943;
+	border-left: 1px solid #a78943;
+	border-bottom: 1px solid #a78943;
+	border-right: 1px solid #a78943;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	transition: all 0.2s;
+}
+
+.footer__social-icons-icon:not(:last-child) {
+	margin-right: 30px;
+}
+
+.footer__top {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	background: #303030;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding: 20px 0;
+	color: #fff;
+}
+
+.footer__top:hover{
+	color: #a78943;
+	transition: all 0.2s;
+}
+
+.footer__top-text {
+	margin-left: 10px;
+}
+
+.footer__top-text a {
+	font-size: 17px;
+	color: #fff;
+	text-transform: uppercase;
+}

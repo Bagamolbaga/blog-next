@@ -1,65 +1,65 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useState, useContext } from "react";
+
+import Head from "next/head";
+import Footer from "../components/Footer/Footer.jsx";
+import Header from "../components/Header/Header.jsx";
+import Main from "../components/Main/Main.jsx";
+import NavBar from "../components/NavBar/NavBar.jsx";
+import { Context } from "../components/useContext/context.js";
 
 export default function Home() {
+  let [posts, setPosts] = useState([
+    {
+      id: 1,
+      img: "fsfsf",
+      tittle: "Text first tittle",
+      text: "Post first text",
+      category: "Photography",
+      author: "Baga Lolka",
+      dateCreate: "21:49 17.11.20",
+      likes: 10,
+      views: 189,
+    },
+    {
+      id: 2,
+      img: "fsfsf",
+      tittle: "Text second tittle",
+      text: "Post second text",
+      category: "Art",
+      author: "Lolka",
+      dateCreate: "15:17 20.12.20",
+      likes: 21,
+      views: 98,
+    },
+    {
+      id: 3,
+      img: "fsfsf",
+      tittle: "Text three tittle",
+      text: "Post three text",
+      category: "Fasion",
+      author: "Baga",
+      dateCreate: "10:31 15.10.20",
+      likes: 17,
+      views: 90,
+    },
+  ]);
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Context.Provider value={{posts}}>
+      <div className="">
+        <Head>
+          <title>BLOGER</title>
+          <link rel="icon" href="/favicon.ico" />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        </Head>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <Header />
+        <NavBar />
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <Main />
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+        <Footer />
+      </div>
+    </Context.Provider>
+  );
 }
